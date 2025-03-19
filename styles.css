@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    background-color: #800000; /* Bordo renk */
+}
+
+.navbar-brand, .nav-link {
+    color: white !important;
+}
+
+footer {
+    background-color: #800000;
+    color: white;
+}
+
+.container h1 {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.container p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 1.1em;
+    color: #333;
+}
+
+footer p {
+    font-size: 1em;
+    color: #fff;
+}
+/* Resim üzerine gelince büyüme efekti */
+.img-hover-zoom {
+    transition: transform 0.3s ease; /* Yavaş büyüme efekti */
+}
+
+.img-hover-zoom:hover {
+    transform: scale(1.2); /* Resmi %20 büyütme */
+}
+/* Resme üzerine gelince şeffaflık efekti */
+.img-hover-opacity {
+    transition: opacity 0.3s ease;
+}
+
+.img-hover-opacity:hover {
+    opacity: 0.6; /* Resmin şeffaflık oranı */
+}

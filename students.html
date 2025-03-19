@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eskisehir Technical University - Students Information">
+    <title>Students - Eskisehir Technical University</title>
+
+    <!-- Link to CSS File -->
+    <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Eskisehir Technical University</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="university.html">University</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="academics.html">Academics</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="students.html">Students</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="campuslife.html">Campus Life</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="documents.html">Documents</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Students Information -->
+    <div class="container mt-4">
+        <h1>Students</h1>
+
+        <!-- Student Login Section -->
+        <h2>Student Login</h2>
+        <form action="home.html" method="POST" onsubmit="return validateForm()">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+
+        <p id="warning" style="color: red; display: none;">Please fill in both username and password fields!</p>
+
+        <!-- Documents Section -->
+        <h2>Documents</h2>
+        <ul>
+            <li><a href="https://www.eskisehir.edu.tr/Uploads/www/files/ISKUR-%C4%B0K%C4%B0NC%C4%B0-YEDEK-L%C4%B0STE-DUYURU.pdf" target="_blank">ISKUR Yedek Liste Duyurusu</a></li>
+            <li><a href="https://oidb.eskisehir.edu.tr/tr/Duyuru/Detay/2024-2025-akademik-yili-bahar-donemi-ortak-kodlu-derslerin-sinav-takvimine-iliskin-duyuru" target="_blank">2024-2025 Akademik Yılı Bahar Dönemi Ortak Kodlu Derslerin Sınav Takvimi</a></li>
+            <li><a href="https://esakit.eskisehir.edu.tr/" target="_blank">ESAKİT - Eskişehir Teknik Üniversitesi e-İzin Sistemi</a></li>
+        </ul>
+
+        <!-- Student Clubs Section -->
+        <h2>Student Clubs</h2>
+        <h3>Science and Industry</h3>
+        <ul>
+            <li>European Electrical Engineering Students Club (EESTEC)</li>
+            <li>Blockchain Club</li>
+            <li>Industry and Productivity Club</li>
+            <li>IEEE Eskisehir Technical University Student Branch</li>
+            <li>UAV Club</li>
+            <li>Chemistry and Technologies Club</li>
+            <li>Material Advantage Club</li>
+            <li>Mathematics Club</li>
+            <li>Defense Industry and Technologies Club (SASTEK)</li>
+            <li>Civil Aviation Club</li>
+            <li>Data Science Club</li>
+            <li>Construction Club</li>
+            <li>Software Club</li>
+        </ul>
+
+        <h3>Sports and Arts</h3>
+        <ul>
+            <li>Dance Club</li>
+            <li>Thinking and Development Club</li>
+            <li>E-Sports Club</li>
+            <li>Photography Club</li>
+            <li>Scouting and Nature Sports Club</li>
+            <li>Common Area Club</li>
+            <li>Chess and Puzzle Games Club</li>
+            <li>Theater and Cinema Club</li>
+        </ul>
+
+        <h3>Social Responsibility</h3>
+        <ul>
+            <li>Environment and Sustainability Club</li>
+            <li>ESTU Walk Club</li>
+            <li>Youth Kadem Club</li>
+            <li>Youth TEMA Club</li>
+            <li>Youth Green Crescent Club</li>
+            <li>National Youth Club</li>
+        </ul>
+
+        <h3>Career and Cultural Activities</h3>
+        <ul>
+            <li>Erasmus Club</li>
+            <li>IEEE Eskisehir Technical University Student Branch</li>
+            <li>Quality Club</li>
+            <li>Career and Entrepreneurship Club</li>
+            <li>Radio Club</li>
+            <li>Design Club</li>
+        </ul>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-light py-4 mt-4">
+        <div class="container text-center">
+            <p>&copy; 2025 Eskisehir Technical University. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript to handle form validation -->
+    <script>
+        function validateForm() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if (username === "" || password === "") {
+                document.getElementById('warning').style.display = 'block';
+                return false; // Prevent form submission
+            }
+            return true; // Allow form submission
+        }
+    </script>
+</body>
+</html>
